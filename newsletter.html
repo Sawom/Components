@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+      .home-service .home-news-letter-container {
+        background-image: url("../images/service/mask.svg");
+        padding-block: min(14vh, 6rem);
+      }
+
+      .home-service .home-news-letter-container .section-title {
+        margin-bottom: min(6vh, 3rem);
+      }
+
+      .home-service .home-news-letter-container .newsletter-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .home-service .home-news-letter-container .newsletter-input {
+        padding: 18px 20px;
+        font-size: 16px;
+        border: 3px solid #2673b84d;
+        border-radius: 14px;
+        outline: none;
+        width: 430px;
+        box-shadow: none;
+        margin-right: 24px;
+      }
+
+      .home-service .home-news-letter-container .newsletter-input {
+        background-color: transparent;
+      }
+
+      .home-service .home-news-letter-container .newsletter-input::placeholder {
+        color: var(--text-color-deep);
+        font-size: 16px !important;
+      }
+
+      .home-service .home-news-letter-container .newsletter-input:focus {
+        border-color: #80b3e1;
+      }
+
+      .home-service .home-news-letter-container .newsletter-button {
+        padding: 10px 25px;
+        font-weight: var(--font-semibold);
+        color: white;
+        background-color: var(--primary-color);
+        border: none;
+        width: 250px;
+        height: 64px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0px 0px 24px 0px rgba(38, 115, 184, 0.2);
+      }
+
+      .home-service .home-news-letter-container .newsletter-button:hover {
+        background-color: rgba(30, 90, 144, 1) !important;
+      }
+
+      .home-service .home-news-letter-container .newsletter-button:hover {
+        background-color: var(--primary-color);
+      }
+
+      .home-service .home-news-letter-container .display-half {
+        margin-left: -14%;
+        margin-right: -14%;
+      }
+
+      .home-service .home-news-letter-container .slide-container {
+        margin-top: 64px;
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .swiper-wrapper {
+        padding: 0 0 70px 0px;
+      }
+
+      .home-service .home-news-letter-container .slide-container .event-card {
+        display: grid;
+        align-items: center;
+        padding: min(1vh, 1rem);
+        border: 1px solid var(--primary-color);
+        border-radius: 16px;
+        gap: 4%;
+        grid-template-columns: 48% 48%;
+        justify-content: center;
+      }
+
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card:hover {
+        box-shadow: 10px 10px 24px 0px rgba(38, 115, 184, 0.1);
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-image
+        img {
+        border-radius: 14px;
+        width: 100%;
+        min-height: 147px;
+        max-height: 147px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content
+        .event-title {
+        font-size: clamp(
+          0.625rem,
+          -0.32894736842105254rem + 1.3157894736842104vw,
+          1.25rem
+        );
+        font-weight: var(--font-bold);
+        margin: 0 0 5% 0;
+      }
+
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content
+        .event-location,
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content
+        .event-date {
+        font-size: clamp(
+          0.625rem,
+          0.24342105263157898rem + 0.5263157894736842vw,
+          0.875rem
+        );
+        margin: 0;
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content
+        .event-location {
+        margin-bottom: 2%;
+      }
+      .home-service
+        .home-news-letter-container
+        .slide-container
+        .event-card
+        .event-content
+        .subscribe-link {
+        font-weight: var(--font-bold);
+        font-size: clamp(
+          0.625rem,
+          0.05263157894736836rem + 0.7894736842105263vw,
+          1rem
+        );
+        margin: 5% 0 0 0;
+      }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 35px;
+        border-radius: 40px;
+        background: rgba(38, 115, 184, 1);
+        height: 13px;
+      }
+
+      .home-news-letter-container .slide-container .swiper-button-next {
+        top: 90%;
+        right: 40%;
+      }
+      .home-news-letter-container .slide-container .swiper-button-prev {
+        top: 90%;
+        left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="overflow-x: hidden">
+      <div class="display-half">
+        <div class="slide-container swiper">
+          <div class="swiper-wrapper">
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> Location
+                </p>
+                <p class="event-date">
+                  <i class="fas fa-calendar-alt"></i> June 23, 2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news2.jpg" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news3.jpg" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> Location
+                </p>
+                <p class="event-date">
+                  <i class="fas fa-calendar-alt"></i> June 23, 2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+
+            <div class="event-card swiper-slide">
+              <div class="event-image">
+                <img src="assets/images/home/news-img.png" alt="Event Image" />
+              </div>
+              <div class="event-content">
+                <h3 class="event-title">PV Design Seminar</h3>
+                <p class="event-location">
+                  <img src="assets/images/home/location.svg" alt="" /> Location
+                </p>
+                <p class="event-date">
+                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
+                  2024
+                </p>
+                <a href="#" class="subscribe-link">Subscribe</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
