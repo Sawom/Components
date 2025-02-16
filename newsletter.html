@@ -3,98 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>raf khata</title>
     <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <style>
-      .home-service .home-news-letter-container {
-        background-image: url("../images/service/mask.svg");
-        padding-block: min(14vh, 6rem);
-      }
 
-      .home-service .home-news-letter-container .section-title {
-        margin-bottom: min(6vh, 3rem);
-      }
-
-      .home-service .home-news-letter-container .newsletter-form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .home-service .home-news-letter-container .newsletter-input {
-        padding: 18px 20px;
-        font-size: 16px;
-        border: 3px solid #2673b84d;
-        border-radius: 14px;
-        outline: none;
-        width: 430px;
-        box-shadow: none;
-        margin-right: 24px;
-      }
-
-      .home-service .home-news-letter-container .newsletter-input {
-        background-color: transparent;
-      }
-
-      .home-service .home-news-letter-container .newsletter-input::placeholder {
-        color: var(--text-color-deep);
-        font-size: 16px !important;
-      }
-
-      .home-service .home-news-letter-container .newsletter-input:focus {
-        border-color: #80b3e1;
-      }
-
-      .home-service .home-news-letter-container .newsletter-button {
-        padding: 10px 25px;
-        font-weight: var(--font-semibold);
-        color: white;
-        background-color: var(--primary-color);
-        border: none;
-        width: 250px;
-        height: 64px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        box-shadow: 0px 0px 24px 0px rgba(38, 115, 184, 0.2);
-      }
-
-      .home-service .home-news-letter-container .newsletter-button:hover {
-        background-color: rgba(30, 90, 144, 1) !important;
-      }
-
-      .home-service .home-news-letter-container .newsletter-button:hover {
-        background-color: var(--primary-color);
-      }
-
-      .home-service .home-news-letter-container .display-half {
+      .display-half {
         margin-left: -14%;
         margin-right: -14%;
       }
 
-      .home-service .home-news-letter-container .slide-container {
+      .slide-container {
         margin-top: 64px;
         display: flex;
         justify-content: center;
         overflow: visible;
       }
 
-      .home-service
-        .home-news-letter-container
-        .slide-container
-        .swiper-wrapper {
+      .slide-container .swiper-wrapper {
         padding: 0 0 70px 0px;
       }
 
-      .home-service .home-news-letter-container .slide-container .event-card {
+      .event-card {
         display: grid;
         align-items: center;
         padding: min(1vh, 1rem);
@@ -105,15 +39,11 @@
         justify-content: center;
       }
 
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card:hover {
         box-shadow: 10px 10px 24px 0px rgba(38, 115, 184, 0.1);
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-image {
         width: 100%;
@@ -122,9 +52,7 @@
         align-items: center;
         justify-content: center;
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-image
         img {
@@ -135,18 +63,14 @@
         height: 100%;
         object-fit: cover;
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-content {
         display: flex;
         justify-content: center;
         flex-direction: column;
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-content
         .event-title {
@@ -159,15 +83,11 @@
         margin: 0 0 5% 0;
       }
 
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-content
         .event-location,
-      .home-service
-        .home-news-letter-container
-        .slide-container
+        .slide-container 
         .event-card
         .event-content
         .event-date {
@@ -178,17 +98,13 @@
         );
         margin: 0;
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-content
         .event-location {
         margin-bottom: 2%;
       }
-      .home-service
-        .home-news-letter-container
-        .slide-container
+      .slide-container 
         .event-card
         .event-content
         .subscribe-link {
@@ -208,21 +124,42 @@
         height: 13px;
       }
 
-      .home-news-letter-container .slide-container .swiper-button-next {
+      .swiper-button-next {
         top: 90%;
         right: 40%;
       }
-      .home-news-letter-container .slide-container .swiper-button-prev {
+      .swiper-button-prev {
         top: 90%;
         left: 40%;
       }
+    .swiper-button-next{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: -2px 0px 4px 0px rgba(38, 115, 184, 1);
+    color: var(--text-color-deep);
+  }
+  .swiper-button-prev{
+    width: 44px;
+    height: 44px;
+    box-shadow: 2px 0px 4px 0px rgba(38, 115, 184, 1);
+    border-radius: 50%;
+    color: var(--text-color-deep);
+  }
+  .swiper-navBtn::after {
+      font-size: 15px;
+      font-weight: bold;
+  }
+
     </style>
-  </head>
+</head>
+ 
   <body>
     <div style="overflow-x: hidden">
       <div class="display-half">
         <div class="slide-container swiper">
           <div class="swiper-wrapper">
+
             <div class="event-card swiper-slide">
               <div class="event-image">
                 <img src="assets/images/home/news-img.png" alt="Event Image" />
@@ -307,72 +244,6 @@
               </div>
             </div>
 
-            <div class="event-card swiper-slide">
-              <div class="event-image">
-                <img src="assets/images/home/news-img.png" alt="Event Image" />
-              </div>
-              <div class="event-content">
-                <h3 class="event-title">PV Design Seminar</h3>
-                <p class="event-location">
-                  <i class="fas fa-map-marker-alt"></i> Location
-                </p>
-                <p class="event-date">
-                  <i class="fas fa-calendar-alt"></i> June 23, 2024
-                </p>
-                <a href="#" class="subscribe-link">Subscribe</a>
-              </div>
-            </div>
-
-            <div class="event-card swiper-slide">
-              <div class="event-image">
-                <img src="assets/images/home/news-img.png" alt="Event Image" />
-              </div>
-              <div class="event-content">
-                <h3 class="event-title">PV Design Seminar</h3>
-                <p class="event-location">
-                  <img src="assets/images/home/location.svg" alt="" /> Location
-                </p>
-                <p class="event-date">
-                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
-                  2024
-                </p>
-                <a href="#" class="subscribe-link">Subscribe</a>
-              </div>
-            </div>
-
-            <div class="event-card swiper-slide">
-              <div class="event-image">
-                <img src="assets/images/home/news-img.png" alt="Event Image" />
-              </div>
-              <div class="event-content">
-                <h3 class="event-title">PV Design Seminar</h3>
-                <p class="event-location">
-                  <img src="assets/images/home/location.svg" alt="" /> Location
-                </p>
-                <p class="event-date">
-                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
-                  2024
-                </p>
-                <a href="#" class="subscribe-link">Subscribe</a>
-              </div>
-            </div>
-
-            <div class="event-card swiper-slide">
-              <div class="event-image">
-                <img src="assets/images/home/news-img.png" alt="Event Image" />
-              </div>
-              <div class="event-content">
-                <h3 class="event-title">PV Design Seminar</h3>
-                <p class="event-location">
-                  <img src="assets/images/home/location.svg" alt="" /> Location
-                </p>
-                <p class="event-date">
-                  <img src="assets/images/home/calendar.svg" alt="" /> June 23,
-                  2024
-                </p>
-                <a href="#" class="subscribe-link">Subscribe</a>
-              </div>
-            </div>
           </div>
 
           <div class="swiper-button-next swiper-navBtn"></div>
@@ -381,12 +252,14 @@
         </div>
       </div>
     </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+
     <script>
       // News slider of home page
-      var news_slider_swiper = new Swiper(
-        ".home-service .home-news-letter-container .slide-container",
-        {
-          slidesPerView: 6,
+      var news_slider_swiper = new Swiper(".slide-container", { 
+          slidesPerView: 2,
           loop: true,
           spaceBetween: 24,
           centeredSlides: false,
@@ -401,19 +274,12 @@
             dynamicMainBullets: 4,
           },
           navigation: {
-            nextEl: ".home-news-letter-container .swiper-button-next",
-            prevEl: ".home-news-letter-container .swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
           breakpoints: {
-            1600: {
-              slidesPerView: 6,
-            },
-            1300: {
-              spaceBetween: 24,
-              slidesPerView: 6,
-            },
             1100: {
-              slidesPerView: 5,
+              slidesPerView: 4,
               spaceBetween: 20,
             },
             768: {
@@ -431,7 +297,7 @@
         }
       );
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
   </body>
 </html>
