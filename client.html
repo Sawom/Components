@@ -150,10 +150,47 @@
       font-size: 15px;
       font-weight: bold;
   }
+
+  /* swiper button */
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 35px;
+        border-radius: 40px;
+        background: rgba(38, 115, 184, 1);
+        height: 13px;
+      }
+
+      .swiper-button-next {
+        top: 90%;
+        right: 40%;
+      }
+      .swiper-button-prev {
+        top: 90%;
+        left: 40%;
+      }
+      .swiper-button-next {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        box-shadow: -2px 0px 4px 0px rgba(38, 115, 184, 1);
+        color: var(--text-color-deep);
+      }
+      .swiper-button-prev {
+        width: 44px;
+        height: 44px;
+        box-shadow: 2px 0px 4px 0px rgba(38, 115, 184, 1);
+        border-radius: 50%;
+        color: var(--text-color-deep);
+      }
+      .swiper-navBtn::after {
+        font-size: 15px;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-    <div class="container-fluid home-client-slider-container parallax-effect">
+    <section  class="home-service" >
+         <div class="container-fluid home-client-slider-container parallax-effect">
 
                 <div class="row">
                     <div class="head-info-area">
@@ -237,6 +274,10 @@
                 </div>
 
             </div>
+    </section>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script>
