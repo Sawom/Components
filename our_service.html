@@ -141,22 +141,8 @@
         font-size: 16px;
         font-weight: bold;
       }
-      .home-service
-        .service-slider-container
-        .service-slider
-        .swiper-button-next {
-        top: 93%;
-        right: 40%;
-      }
-      .home-service
-        .service-slider-container
-        .service-slider
-        .swiper-button-prev {
-        top: 93%;
-        left: 40%;
-      }
-
-      .home-service .service-slider-container .swiper-pagination-bullet-active {
+      /* service slider prev next */
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
         opacity: 1;
         width: 35px;
         border-radius: 40px;
@@ -164,19 +150,31 @@
         height: 13px;
       }
 
-      .home-service
-        .service-slider-container
-        .service-slider
-        .swiper-button-next {
-        top: 93%;
+      .swiper-button-next {
+        top: 90%;
         right: 40%;
       }
-      .home-service
-        .service-slider-container
-        .service-slider
-        .swiper-button-prev {
-        top: 93%;
+      .swiper-button-prev {
+        top: 90%;
         left: 40%;
+      }
+      .swiper-button-next {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        box-shadow: -2px 0px 4px 0px rgba(38, 115, 184, 1);
+        color: var(--text-color-deep);
+      }
+      .swiper-button-prev {
+        width: 44px;
+        height: 44px;
+        box-shadow: 2px 0px 4px 0px rgba(38, 115, 184, 1);
+        border-radius: 50%;
+        color: var(--text-color-deep);
+      }
+      .swiper-navBtn::after {
+        font-size: 15px;
+        font-weight: bold;
       }
     </style>
   </head>
