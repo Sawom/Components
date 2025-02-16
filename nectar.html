@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+      .home-service .home-feature-slider-container .slide-container {
+        position: relative;
+        /* max-width: 1920px; */
+        display: flex;
+        justify-content: center;
+      }
+
+      .home-service .home-feature-slider-container .display-half {
+        margin-left: -15%;
+        margin-right: -15%;
+      }
+
+      .home-service
+        .home-feature-slider-container
+        .slide-container
+        .slide-content {
+        /* overflow: visible;  */
+        width: 100%;
+        margin: 0 70px 100px;
+        /* background-color: yellow; */
+      }
+
+      .home-service .home-feature-slider-container .card {
+        background-color: var(--global-background-color);
+        border: 1px solid rgba(38, 115, 184, 0.3);
+        /* max-width: 596px !important; */
+        border-radius: 40px;
+        border: 1px solid rgba(38, 115, 184, 0.3);
+      }
+
+      .home-service .home-feature-slider-container .card:hover {
+        box-shadow: 10px 10px 24px 0px rgba(38, 115, 184, 0.1);
+      }
+
+      .home-service .home-feature-slider-container .card-content {
+        /* max-width: 512px; */
+        /* gap: 16px; */
+        padding: 40px;
+      }
+
+      .home-service .home-feature-slider-container .slide-container .name {
+        font-size: 24px;
+        font-weight: var(--font-bold);
+        color: var(--text-color-deep);
+      }
+
+      .home-service
+        .home-feature-slider-container
+        .slide-container
+        .description {
+        line-height: 24px;
+        color: var(--text-color-deep);
+        text-align: left;
+        margin: 0;
+        text-align: justify;
+      }
+      .home-feature-slider-container .slide-container .swiper-button-next {
+        top: 90%;
+        right: 40%;
+      }
+      .home-feature-slider-container .slide-container .swiper-button-prev {
+        top: 90%;
+        left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid home-feature-slider-container">
+      <div class="row">
+        <div style="overflow-x: hidden">
+          <div class="display-half">
+            <div class="slide-container swiper">
+              <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                  <!-- 1 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Efficient Employee Onboarding</h2>
+                      <p class="description">
+                        Onboard new employees with just a few clicks. Create
+                        profiles, view resumes, and manage paperwork without any
+                        difficulty—all in a user-friendly, paperless
+                        environment.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Simplified Multi-Business Management</h2>
+                      <p class="description">
+                        Unlock effortless business management with the Nectar
+                        App. Seamlessly oversee all your ventures in one place;
+                        switching between them is a matter of second. Eliminate
+                        multiple logins and manage your businesses through a
+                        single dashboard.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Top-Notch Security</h2>
+                      <p class="description">
+                        Experience ultimate security with fingerprint and facial
+                        recognition features, ensuring your business data stays
+                        private and always protected.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 4 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Fully Customizable Dashboard</h2>
+                      <p class="description">
+                        Personalize your dashboard to suit your needs. Flexibly
+                        add, remove, or reposition cards, giving you full
+                        control over your workspace.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 5 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Real-Time Performance Insights</h2>
+                      <p class="description">
+                        Track your business performance in real time with
+                        detailed analytics and reports. Make data-driven
+                        decisions with ease and stay ahead of your competition.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 6 -->
+                  <div class="card swiper-slide">
+                    <div class="card-content">
+                      <h2 class="name">Seamless Team Collaboration</h2>
+                      <p class="description">
+                        Boost productivity with tools designed for seamless team
+                        collaboration. Assign tasks, share updates, and
+                        communicate effectively—all in one platform to keep
+                        everyone aligned and focused.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // feature slider of home page
+      var home_feature_slider = new Swiper(
+        ".home-service .home-feature-slider-container .slide-content",
+        {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            delay: 3000,
+          },
+          grabCursor: true,
+          pagination: {
+            el: ".home-service .home-feature-slider-container .swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".home-feature-slider-container .swiper-button-next",
+            prevEl: ".home-feature-slider-container .swiper-button-prev",
+          },
+          breakpoints: {
+            1600: {
+              spaceBetween: 35,
+              slidesPerView: 4,
+            },
+            1300: {
+              slidesPerView: 4,
+            },
+            1100: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            0: {
+              slidesPerView: 1,
+            },
+          },
+        }
+      );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
