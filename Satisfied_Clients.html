@@ -19,6 +19,94 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        .home-service .home-client-slider-container{
+    background: linear-gradient(116deg, rgba(68, 166, 255, 0.6) -0.43%, #D2FFEB 105.45%);
+    padding-block: min(14vh, 6rem);
+  }
+
+  .home-service .home-client-slider-container .section-title{
+    margin-bottom: min(6vh, 3rem);
+  }
+
+  .home-service .home-client-slider-container  .slide-container {
+    max-width: 1900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.home-service .home-client-slider-container  .slide-content {
+    /* margin: 0 40px; */
+    max-width: 1490px;
+    overflow: hidden;
+  }
+
+
+
+
+
+.home-service .home-client-slider-container  .card{
+    background: rgba(230, 248, 250, 1);
+    border-radius: 40px;
+    border: none;
+    overflow: hidden;
+}
+    
+.home-service .home-client-slider-container .container-shape{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 90%);
+    max-height: 330px;
+}
+    
+.home-service .home-client-slider-container img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px 20px 0 0;
+    
+}
+    
+.home-service .home-client-slider-container .details{
+    padding: 20px 20px;
+}
+
+.home-service .home-client-slider-container .details h3,
+.home-service .home-client-slider-container .details h4{
+    color: var(--text-color-deep);
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+    font-weight: var(--font-semibold);
+}
+
+.home-service .home-client-slider-container .details p{
+    color: var(--text-color-deep);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.home-service .home-client-slider-container  .swiper{
+      overflow: visible;
+  }
+  
+  .home-service .home-client-slider-container .swiper-navBtn {
+    color: var(--text-color-deep);
+    transition: color 0.3s ease;
+  }
+  
+  .home-service .home-client-slider-container .slide-content{
+    margin-bottom: 70px;
+  }
+  
+  .home-service .home-client-slider-container.swiper-navBtn::before,
+  .home-service .home-client-slider-container.swiper-navBtn::after {
+      font-size: 15px;
+      font-weight: bold;
+  }
+    </style>
   </head>
   <body>
     <div class="container-fluid home-client-slider-container parallax-effect">
@@ -107,5 +195,47 @@
             </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Client slider of home page
+    var home_client_slider = new Swiper(".home-service .home-client-slider-container .slide-content", {
+    slidesPerView: 4,
+    spaceBetween: 35,
+    centeredSlides: false,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+        el: ".home-service .home-client-slider-container .swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".home-service .home-client-slider-container .swiper-button-next",
+        prevEl: ".home-service .home-client-slider-container .swiper-button-prev",
+    },
+    breakpoints: {
+        1600: {
+        spaceBetween: 35,
+        slidesPerView: 4,
+        },
+        1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        },
+        850: {
+        slidesPerView: 3.5,
+        spaceBetween: 20,
+        },
+        650: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        },
+        480: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+        },
+        0: {
+        slidesPerView: 1,
+        },
+    },
+    });
+    </script>
   </body>
 </html>
