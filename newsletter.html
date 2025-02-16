@@ -381,5 +381,57 @@
         </div>
       </div>
     </div>
+    <script>
+      // News slider of home page
+      var news_slider_swiper = new Swiper(
+        ".home-service .home-news-letter-container .slide-container",
+        {
+          slidesPerView: 6,
+          loop: true,
+          spaceBetween: 24,
+          centeredSlides: false,
+          speed: 1000,
+          autoplay: {
+            delay: 3000,
+          },
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicMainBullets: 4,
+          },
+          navigation: {
+            nextEl: ".home-news-letter-container .swiper-button-next",
+            prevEl: ".home-news-letter-container .swiper-button-prev",
+          },
+          breakpoints: {
+            1600: {
+              slidesPerView: 6,
+            },
+            1300: {
+              spaceBetween: 24,
+              slidesPerView: 6,
+            },
+            1100: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 15,
+            },
+            480: {
+              slidesPerView: 2.2,
+              spaceBetween: 10,
+            },
+            0: {
+              slidesPerView: 1.3,
+            },
+          },
+        }
+      );
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
