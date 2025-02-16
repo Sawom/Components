@@ -5,12 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>raf khata</title>
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-
+    <!-- <link rel="stylesheet" href="assets/css/root.css" /> -->
     <style>
+      :root {
+        --global-primary-color: #2673b8;
+        --bg-primary-color: #e6f8fa;
+        --global-text-color: #111111;
+        --global-border: 1px solid #2673b8;
+        --light-border: #2673b84d;
+        --global-font: "Gilroy", sans-serif;
+
+        /* ===== GLobal Colors Start ===== */
+        --global-background-color: rgba(230, 248, 250, 1);
+        --active-border: 1px solid rgba(38, 115, 184, 1);
+        --inactive-border: 1px solid rgba(38, 115, 184, 0.7);
+        --warning-color-deep: rgba(228, 0, 0, 1);
+        --warning-color-light: rgba(228, 0, 0, 0.1);
+        --focus-input-bg-color: #d3ebf3;
+        --primary-color: rgba(38, 115, 184, 1);
+        --text-color-deep: rgba(17, 17, 17, 1);
+        --text-color-light: rgba(153, 153, 153, 1);
+        --text-color-white: rgba(255, 255, 255, 1);
+        --separator-color: rgba(38, 115, 184, 0.3);
+        --box-shadow: 0px 0px 24px 0px rgba(38, 115, 184, 0.2);
+        --secondary-btn-hover-color: rgba(187, 236, 241, 1);
+        --primary-btn-hover-color: rgba(30, 90, 144, 1);
+        /* ===== GLobal Colors End ===== */
+
+        /* Define font families */
+        --font-primary: "Gilroy", sans-serif;
+
+        /* Define font weights */
+        --font-thin: 100;
+        --font-ultralight: 200;
+        --font-light: 300;
+        --font-regular: 400;
+        --font-medium: 500;
+        --font-semibold: 600;
+        --font-bold: 700;
+        --font-extrabold: 800;
+        --font-heavy: 850;
+        --font-black: 900;
+
+        /* Define font styles */
+        --font-style-normal: normal;
+        --font-style-italic: italic;
+      }
 
       .display-half {
         margin-left: -14%;
@@ -39,23 +86,17 @@
         justify-content: center;
       }
 
-      .slide-container 
-        .event-card:hover {
+      .slide-container .event-card:hover {
         box-shadow: 10px 10px 24px 0px rgba(38, 115, 184, 0.1);
       }
-      .slide-container 
-        .event-card
-        .event-image {
+      .slide-container .event-card .event-image {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .slide-container 
-        .event-card
-        .event-image
-        img {
+      .slide-container .event-card .event-image img {
         border-radius: 14px;
         width: 100%;
         min-height: 147px;
@@ -63,17 +104,12 @@
         height: 100%;
         object-fit: cover;
       }
-      .slide-container 
-        .event-card
-        .event-content {
+      .slide-container .event-card .event-content {
         display: flex;
         justify-content: center;
         flex-direction: column;
       }
-      .slide-container 
-        .event-card
-        .event-content
-        .event-title {
+      .slide-container .event-card .event-content .event-title {
         font-size: clamp(
           0.625rem,
           -0.32894736842105254rem + 1.3157894736842104vw,
@@ -83,14 +119,8 @@
         margin: 0 0 5% 0;
       }
 
-      .slide-container 
-        .event-card
-        .event-content
-        .event-location,
-        .slide-container 
-        .event-card
-        .event-content
-        .event-date {
+      .slide-container .event-card .event-content .event-location,
+      .slide-container .event-card .event-content .event-date {
         font-size: clamp(
           0.625rem,
           0.24342105263157898rem + 0.5263157894736842vw,
@@ -98,16 +128,10 @@
         );
         margin: 0;
       }
-      .slide-container 
-        .event-card
-        .event-content
-        .event-location {
+      .slide-container .event-card .event-content .event-location {
         margin-bottom: 2%;
       }
-      .slide-container 
-        .event-card
-        .event-content
-        .subscribe-link {
+      .slide-container .event-card .event-content .subscribe-link {
         font-weight: var(--font-bold);
         font-size: clamp(
           0.625rem,
@@ -132,34 +156,32 @@
         top: 90%;
         left: 40%;
       }
-    .swiper-button-next{
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    box-shadow: -2px 0px 4px 0px rgba(38, 115, 184, 1);
-    color: var(--text-color-deep);
-  }
-  .swiper-button-prev{
-    width: 44px;
-    height: 44px;
-    box-shadow: 2px 0px 4px 0px rgba(38, 115, 184, 1);
-    border-radius: 50%;
-    color: var(--text-color-deep);
-  }
-  .swiper-navBtn::after {
-      font-size: 15px;
-      font-weight: bold;
-  }
-
+      .swiper-button-next {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        box-shadow: -2px 0px 4px 0px rgba(38, 115, 184, 1);
+        color: var(--text-color-deep);
+      }
+      .swiper-button-prev {
+        width: 44px;
+        height: 44px;
+        box-shadow: 2px 0px 4px 0px rgba(38, 115, 184, 1);
+        border-radius: 50%;
+        color: var(--text-color-deep);
+      }
+      .swiper-navBtn::after {
+        font-size: 15px;
+        font-weight: bold;
+      }
     </style>
-</head>
- 
+  </head>
+
   <body>
     <div style="overflow-x: hidden">
       <div class="display-half">
         <div class="slide-container swiper">
           <div class="swiper-wrapper">
-
             <div class="event-card swiper-slide">
               <div class="event-image">
                 <img src="assets/images/home/news-img.png" alt="Event Image" />
@@ -243,7 +265,6 @@
                 <a href="#" class="subscribe-link">Subscribe</a>
               </div>
             </div>
-
           </div>
 
           <div class="swiper-button-next swiper-navBtn"></div>
@@ -253,51 +274,47 @@
       </div>
     </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
       // News slider of home page
-      var news_slider_swiper = new Swiper(".slide-container", { 
-          slidesPerView: 2,
-          loop: true,
-          spaceBetween: 24,
-          centeredSlides: false,
-          speed: 1000,
-          autoplay: {
-            delay: 3000,
+      var news_slider_swiper = new Swiper(".slide-container", {
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 24,
+        centeredSlides: false,
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+        },
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicMainBullets: 4,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1100: {
+            slidesPerView: 4,
+            spaceBetween: 20,
           },
-          grabCursor: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicMainBullets: 4,
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 15,
           },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+          480: {
+            slidesPerView: 2.2,
+            spaceBetween: 10,
           },
-          breakpoints: {
-            1100: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 15,
-            },
-            480: {
-              slidesPerView: 2.2,
-              spaceBetween: 10,
-            },
-            0: {
-              slidesPerView: 1.3,
-            },
+          0: {
+            slidesPerView: 1.3,
           },
-        }
-      );
+        },
+      });
     </script>
-
-
   </body>
 </html>
